@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>GifDeck</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/ladda-themeless.min.css">
+        <script src="js/modernizr.custom.51628.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        if (!(Modernizr.canvas && Modernizr.webworkers)){
+        var root = document.getElementsByTagName( 'html' )[0]; // '0' to assign the first (and only `HTML` tag)
+        root.setAttribute( "class", "not-supported" );
+        }
+        </script>
+        <!-- Custom Fonts -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <i class="fa fa-play-circle"></i>  <span class="light">GIFDeck</span> [in]
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#convert">Convert</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://www.github.com/jaipandya">Github</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading hide">GifDeck</h1>
+                            <a href="#convert" class="page-scroll intro-gif-container">
+                                <img src="images/gif/slideshare-as-a.gif" class="main-image img-responsive">
+                                <!--                                 <img src="images/gif/and.gif" class="hide img-responsive main-image"> -->
+                            </a>
+                            <p class="intro-text hide">Convert your SlideShares into beautifully animated GIFs.</p>
+                            <a href="#convert" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Download Section -->
+        <section id="convert" class="content-section text-center">
+            <div class="form-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2 col-xs-12">
+                            <h2>Convert your SlideShare into a GIF</h2>
+                            <form class="slideshare-url-form">
+                                <div class="form-group col-lg-9">
+                                    <input type="text" class="form-control input-hg" placeholder="Paste SlideShare URL here" />
+                                    <span class="input-icon fui-check-inverted"></span>
+                                </div>
+                                <a id="j-convert-to-gif" href="#" class="btn btn-lg btn-default ladda-button col-lg-2 col-sm-2 col-sm-offset-4 col-lg-offset-0 col-xs-4 col-xs-offset-3" data-size="l" data-spinner-color="#FF0000" data-style="zoom-in" onclick="return false"><span class="ladda-label">Submit</span></a>
+                                <a href="#" class="settings-button col-sm-1 col-xs-1"><span class="glyphicon glyphicon-cog"></span></a>
+                            </form>
+
+                            <!--
+                            <input class='btn btn-lg btn-default col-lg-3' type='submit' value='submit'></input> -->
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-lg-offset-7 col-sm-3 col-sm-offset-4 col-xs-5 col-xs-offset-6 settings">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label for="delay" class="col-sm-6 control-label">Interval</label>
+                                    <div class="col-sm-5">
+                                        <input type="number" class="form-control input-sm" id="delay" placeholder="" step="100">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="slideCount" class="col-sm-6 control-label">Slides</label>
+                                    <div class="col-sm-5">
+                                        <input type="number" class="form-control input-sm" id="slideCount" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="size" class="col-sm-6 control-label">Size</label>
+                                    <div class="col-sm-5">
+                                        <select class="form-control input-sm" id="size">
+                                            <option value="400">Small</option>
+                                            <option value="700">Medium</option>
+                                            <option value="1024">Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="alert alert-danger col-lg-6 col-lg-offset-3 hide" role="alert">
+                            Something went horribly wrong. Please try again later.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="progress hide">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                    <span class=""></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-xs-offset-2 col-lg-6 col-lg-offset-3 hide thumbnail-container">
+                            <div class="thumbnail">
+                                <img class="converted-gif" alt="converted GIF">
+                            </div>
+                        </div>
+                        <a id="save-gif" href="#" class="btn btn-lg btn-default col-xs-4 col-xs-offset-4 col-lg-2 col-lg-offset-5 hide"> Save </a>
+                        <!--
+                        <div class=" imgur-button-container hide">
+                            <a href="#" class="btn btn-lg btn-default ladda-button col-lg-4" data-size="l" data-spinner-color="#FF0000" data-style="expand-left" onclick="return false"><span class="ladda-label">Post to Imgur</span></a>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p><a href='http://github.com/jaipandya'>Fork me on github</a> - Jai Pandya 2014</p>
+            </div>
+        </footer>
+        <section class="not-supported-message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h1>Sorry, your browser is not supported.</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- jQuery Version 1.11.0 -->
+        <script src="js/jquery-1.11.0.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="js/gif.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/camanjs/4.1.2/caman.min.js"></script>
+        <script src='js/proxy.js'></script>
+        <script src='js/application.js'></script>
+        <script src="js/startup.js"></script>
+        <script src="js/spin.min.js"></script>
+        <script src="js/ladda.min.js"></script>
+    </body>
+</html>

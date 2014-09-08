@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>S3 proxy</title>
+    <script src='proxy.js?xYzb' type='text/javascript'></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      //<![CDATA[
+        window.onload = function() {
+          new Proxy.Proxy ({
+            end_point:    parent,
+            from:         "http://dev.gifdeck.in:8080",
+            worker_class: Proxy.ImageLoader
+          })
+        }
+      //]]>
+    </script>
+  </body>
+</html>
