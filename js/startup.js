@@ -19,12 +19,12 @@ $(function() {
 
     $('.settings .form-group .form-control').change(function(e){
         options[$(this).attr('id')] = +$(this).val();
-        console.log(options);
     })
 
     // Interaction for settings button
     $('.settings-button').click(function(e){
         e.preventDefault();
+        ga('send', 'event', 'gif', 'setting_button');
         $('.settings').slideToggle();
     })
 
@@ -61,6 +61,7 @@ $(function() {
         ladda.start();
         gifdeck = new GifDeck(options);
         gifdeck.fetchData(url);
+        ga('send', 'event', 'gif', 'started');
         return false;
     }
 
@@ -199,6 +200,7 @@ $(function($) {
             $('.thumbnail-container').removeClass('hide');
             $('.converted-gif').attr('src', object_url);
             self.showGifDownloadButton(object_url)
+            ga('send', 'event', 'gif', 'created');
         });
 
         this.gif.on('progress', function(p) {
@@ -208,6 +210,7 @@ $(function($) {
         try {
             this.gif.render();
         } catch (e) {
+            ga('send', 'event', 'gif', 'error');
             self.show_error();
         }
     };
