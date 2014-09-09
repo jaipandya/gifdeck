@@ -406,6 +406,9 @@ div.alert {
 #faq {
   background-color: #ffffff;
 }
+#faq a {
+  color: #1abc9c;
+}
 #faq .row {
   margin-top: 12%;
   margin-bottom: 12%;
