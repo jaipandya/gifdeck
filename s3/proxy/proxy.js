@@ -14,13 +14,13 @@ Proxy = {
       });
     }
     _Class.prototype.message_received = function(event) {
-      if (event.origin !== this.expected_domain) {
-        return;
-      }
+      // if (event.origin !== this.expected_domain) {
+      //   return;
+      // }
       return this.worker.execute(JSON.parse(event.data));
     };
     _Class.prototype.send = function(message) {
-      return this.end_point.postMessage(JSON.stringify(message), this.expected_domain);
+      return this.end_point.postMessage(JSON.stringify(message), '*' /*this.expected_domain */);
     };
     return _Class;
   })(),

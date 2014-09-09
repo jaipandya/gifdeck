@@ -55,7 +55,7 @@ $(function() {
 
     var gifDeckHandler = function(e){
         url = $('#convert input.input-hg').val();
-        url = url || 'http://www.slideshare.net/initialstate/big-data-from-small-places'
+        url = url || 'http://www.slideshare.net/jai/hello-38726339'
         e.preventDefault();
         window.ladda = Ladda.create(this);
         ladda.start();
@@ -102,7 +102,7 @@ $(function($) {
     }
 
     GifDeck.prototype.config = function(config) {
-        this.maxWidth = +(config && config.width) || 650;
+        this.maxWidth = +(config && config.size) || 700;
         this.slideCount = +(config && config.slideCount) || 500;
         this.delay = +(config && config.delay) || 1500;
 
