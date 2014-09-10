@@ -282,13 +282,13 @@ footer p {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
+  background: #3c3c3c;
+  background: rgba(44, 62, 80, 0.2);
 }
 ::selection {
   text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
+  background: #3c3c3c;
+  background: rgba(44, 62, 80, 0.2);
 }
 img::selection {
   background: transparent;
@@ -297,7 +297,7 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+  webkit-tap-highlight-color: rgba(44, 62, 80, 0.2);
 }
 #convert {
   background: #ffffff no-repeat center center scroll;
