@@ -57,7 +57,7 @@ $(function() {
         url = $('#convert input.input-hg').val();
         url = url || 'http://www.slideshare.net/jai/hello-38726339'
         e.preventDefault();
-        window.ladda = Ladda.create(this);
+        window.ladda = Ladda.create($('#j-convert-to-gif')[0]);
         ladda.start();
         gifdeck = new GifDeck(options);
         gifdeck.fetchData(url);
@@ -67,7 +67,11 @@ $(function() {
 
     // Bhai bhai - bhai bhai
     $('#j-convert-to-gif').click(gifDeckHandler);
-    $('#convert input[type=text]').keypress(gifDeckHandler);
+    $('#convert input[type=text]').keypress(function(e){
+        if (e.keyCode == 13) {
+            gifDeckHandler(e);
+        }
+    });
 
     Ladda.bind('.ladda-button')
 });
@@ -163,7 +167,6 @@ $(function($) {
                 self.slides = _slides;
             })
             .fail(function(error) {
-                debugger
                 self.show_error("Presentation couldn't be fetched");
             })
             .always(function() {
