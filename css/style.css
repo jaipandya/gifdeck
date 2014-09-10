@@ -274,6 +274,9 @@ footer {
 footer a {
   color: #ffffff;
 }
+footer a.btn {
+  margin: 30px 20px 10px 20px;
+}
 footer a:hover {
   color: #ffffff;
 }
