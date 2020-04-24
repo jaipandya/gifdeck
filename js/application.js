@@ -5,7 +5,7 @@ if (!Application) {
 Application.Main = (function() {
     function _Class() {
         this.proxy = new Application.Proxy({
-            url: 'http://image.slidesharecdn.com/proxy/proxy.html?xYu10uB',
+            url: 'https://image.slidesharecdn.com/proxy/proxy.html?xYu10uB',
             application: this
         });
         this.reset();
